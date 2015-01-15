@@ -29,23 +29,27 @@ var main = new UI.Card({
 console.log("App started");
 main.show();
 
-main.on('click', 'select', function(e) {  
-   console.log("Entered Tracker");   
-   Accel.peek(function(e) {
-      console.log('Current acceleration on axis are: X=' + e.accel.x + ' Y=' + e.accel.y + ' Z=' + e.accel.z);     
-      AxisSnapShot.text('Snapshot of acceleration on axis is: X=' + e.accel.x + ' Y=' + e.accel.y + ' Z=' + e.accel.z);
-      try{
-         AccelerometerScreen.hide();
-         console.log("WindowRefreshed");
-      }catch(err){
-         console.log(err);
-         console.log("First Time in Screen");
-      }     
-      AccelerometerScreen.insert(0,AxisSnapShot);
-      AccelerometerScreen.show();
-   });
-});
 
-  
+main.on('click', 'select', onClick);
+
+function onClick(e) {
+   console.log("Entered Tracker");   
+   Accel.peek(onPeek);
+}
+
+function onPeek(e) {
+   console.log('Current acceleration on axis are: X=' + e.accel.x + ' Y=' + e.accel.y + ' Z=' + e.accel.z);     
+   AxisSnapShot.text('Snapshot of acceleration on axis is: X=' + e.accel.x + ' Y=' + e.accel.y + ' Z=' + e.accel.z);
+   try{
+      AccelerometerScreen.hide();
+      console.log("WindowRefreshed");
+   }catch(err){
+      console.log(err);
+      console.log("First Time in Screen");
+   }     
+   AccelerometerScreen.insert(0,AxisSnapShot);
+   AccelerometerScreen.show();
+}
+
 
 
