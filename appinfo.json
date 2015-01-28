@@ -3,14 +3,13 @@
     "capabilities": [
         ""
     ],
-    "companyName": "scarymrmoley@hotmail.co.uk",
-    "longName": "AccelerometerApp",
+    "companyName": "max-hunt@hotmail.co.uk",
+    "longName": "AccelSnapShot",
     "projectType": "pebblejs",
     "resources": {
         "media": [
             {
                 "file": "images/menu_icon.png",
-                "menuIcon": true,
                 "name": "IMAGE_MENU_ICON",
                 "type": "png"
             },
@@ -28,6 +27,12 @@
                 "file": "fonts/UbuntuMono-Regular.ttf",
                 "name": "MONO_FONT_14",
                 "type": "font"
+            },
+            {
+                "file": "images/snapShotIcon.png",
+                "menuIcon": true,
+                "name": "IMAGES_SNAPSHOTICON_PNG",
+                "type": "png"
             }
         ]
     },

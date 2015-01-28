@@ -26,12 +26,14 @@ var main = new UI.Card({
 });
 
 //start APP
+//main body
 console.log("App started");
 main.show();
 
-
+//events
 main.on('click', 'select', onClick);
 
+//functions 
 function onClick(e) {
    console.log("Entered Tracker");   
    Accel.peek(onPeek);
